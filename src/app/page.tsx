@@ -1,6 +1,5 @@
-import Link from "next/link";
-import classes from "./styles.module.scss";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return <div>Main content</div>;
+  redirect("/restaurants");
 }

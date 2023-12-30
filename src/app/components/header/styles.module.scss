@@ -1,3 +1,16 @@
-.link {
-  margin-left: 5px;
+@use "../../scss/common.scss" as c;
+@use "../../scss/buttons.scss" as b;
+
+.header {
+  min-height: 75px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+  background-color: c.$colorBrown;
+  z-index: 1;
+}
+
+.header__button {
+  @include b.primaryButton();
 }

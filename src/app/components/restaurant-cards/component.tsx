@@ -1,6 +1,7 @@
 import { normalizedRestaurants } from "@/constants/mock";
 import { RestaurantEntity } from "@/app/types";
-import Link from "next/link";
+import classes from "./styles.module.scss";
+import { RestaurantCard } from "../restaurant-card/component";
 
 interface Props {
   restaurants: RestaurantEntity[];
@@ -8,18 +9,15 @@ interface Props {
 
 const RestaurantCards: React.FC<Props> = ({ restaurants }) => {
   return (
-    <div>
-      <h3>Restaurants</h3>
-      <ul>
-        {restaurants.map(({ name, id }) => {
-          return (
-            <li key={id}>
-              <Link href={`/restaurants/${id}`}>{name}</Link>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+    <ul className={classes.cards}>
+      {restaurants.map((restaurant: RestaurantEntity) => {
+        return (
+          <li key={restaurant.id}>
+            <RestaurantCard restaurant={restaurant} />
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 export default RestaurantCards;

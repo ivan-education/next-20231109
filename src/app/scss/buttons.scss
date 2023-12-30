@@ -1,0 +1,21 @@
+@use "./common.scss";
+
+@mixin primaryButton() {
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:global(.light) {
+    background-color: common.$colorCreamy;
+    color: common.$colorBrown;
+  }
+  &:global(.dark) {
+    background-color: #fff;
+    color: black;
+  }
+}

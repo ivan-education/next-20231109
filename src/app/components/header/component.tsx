@@ -1,16 +1,16 @@
 import Link from "next/link";
 import classes from "./styles.module.scss";
+import classnames from "classnames";
+import { Button } from "../button/component";
 
-const Header: React.FC = () => {
+interface Props {
+  className: string;
+}
+
+const Header: React.FC<Props> = ({ className }) => {
   return (
-    <header>
-      <b>Header</b>
-      <Link href="/" className={classes.link}>
-        Root
-      </Link>
-      <Link href="/restaurants" className={classes.link}>
-        Restaurants
-      </Link>
+    <header className={classnames(classes.header, className)}>
+      <Button className={classes.header__button}>Order</Button>
     </header>
   );
 };

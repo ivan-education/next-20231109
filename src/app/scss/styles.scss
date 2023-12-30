@@ -1,0 +1,30 @@
+@use "./common.scss";
+
+html,
+body {
+  margin: 0;
+  background-color: common.$lightCreamy;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+
+  @media screen and (max-width: common.$breakpointMobile) {
+    margin: 20px common.$mobilePadding;
+  }
+}

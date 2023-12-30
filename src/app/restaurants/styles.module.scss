@@ -1,0 +1,25 @@
+@use "../scss/common.scss" as c;
+
+.restaurantPage {
+  &:global(.loading) {
+    display: none;
+  }
+}
+
+.spinnerWrapper {
+  display: none;
+  height: 100%;
+  background-color: c.$lightCreamy;
+
+  &:global(.loading) {
+    display: block;
+  }
+}
+
+.spinner {
+  width: 100px;
+  display: block;
+  position: absolute;
+  left: calc(50% - 50px);
+  top: 150px;
+}
