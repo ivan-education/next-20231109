@@ -3,8 +3,9 @@ import Dish from "../dish/component";
 
 interface Props {
   restaurant: RestaurantEntity;
+  className?: string;
 }
-const Restaurant: React.FC<Props> = ({ restaurant }) => {
+const Restaurant: React.FC<Props> = ({ restaurant, className }) => {
   return (
     <div>
       <h3>{restaurant.name}</h3>

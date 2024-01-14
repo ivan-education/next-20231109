@@ -1,0 +1,15 @@
+@use "../../scss/common.scss" as c;
+
+.dishes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dishes__container {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+
+  @media screen and (max-width: c.$breakpointMobile) {
+    width: 100%;
+  }
+}
